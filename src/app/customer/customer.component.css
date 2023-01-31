@@ -1,4 +1,4 @@
-/* .h1{
+.h1{
     text-align: center;
 }
 .container{
@@ -12,7 +12,7 @@
 /* .customer-detail{
     display: grid;
 } */
-/* .form-group{
+.form-group{
     display: grid;
     width: 10px;
     text-align: justify;
@@ -40,4 +40,4 @@ div.container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-  }  */
+  } 
