@@ -1,0 +1,56 @@
+.container-fluid{
+    padding-top: 20px;
+    display: flex;
+    justify-content: left;
+    background-color: #ADD8E6; 
+    margin-left: 5pxpx;
+}
+.h2{
+    margin-right: 500px;
+}
+/* .nav navbar-nav{
+    padding-top: 20px;
+    justify-content: right;
+    display: flex;
+    margin-right: auto;
+
+} */
+/* .btn {
+    margin-left: 900px;
+} */
+.logo{
+    width: 50px;
+    position: absolute;
+    top: 3%;
+    bottom: 3%;
+    left: 2%;
+    text-align: center;
+}
+.collapse {
+    width: 120px;
+    height: 150vh;
+    position:fixed;
+    left: 20%;
+    right: 0;
+    top: 2;
+    margin-left: 450px;
+}
+.nav{
+    margin-left: 425px;
+}
+/* .navbar-brand{
+    text-align: center;
+    justify-content: center;
+} */
+/* .heading{
+    text-align: center;
+    left: 100px;
+} */
+/* .body{
+    margin: 0;
+    padding: 0;
+    background: url(memstech.png);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}  */
