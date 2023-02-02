@@ -20,10 +20,19 @@ input{
 }
 
 .containerDiv{
-    width: 60%;
-    border: 3px solid #f1f1f1;
-    background-color: #ADD8E6;
+    background-image: url("E:\Memstech\learning_memstech\src\assets\login.jpg"); 
+    padding-top: 20px;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 100vh;
+}
+/* .containerDiv{
+    width: 60%; 
+    border: 3px solid #f1f1f1; 
+    background-color: #ADD8E6; 
     height: 200;
     display: grid;
-    justify-content: center;
-}
+    justify-content: center; 
+    margin-left: 5pxpx;
+} */

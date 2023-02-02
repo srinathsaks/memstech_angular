@@ -1,30 +1,44 @@
 .h1{
     text-align: center;
 }
+.heading{
+    color: #f2f2f2;
+    background-color: blue;
+    width: 100%;
+    height: 5vh;
+    padding: 0;
+
+}
 .container{
     padding: auto;
     max-height: max-content;
     background-color: white;
 }
+.content{
+    width:100%;
+    /* height: 100vh;  */
+    /* background-image: url(E:\Memstech\learning_memstech\src\assets\customer.jpg); */
+    background-size: cover;
+    background-position: center;
+}
+
 .btn {
     text-align: left;
 }
-/* .customer-detail{
-    display: grid;
-} */
+
 .form-group{
     display: grid;
     width: 10px;
     text-align: justify;
 
 }
-.element-actions{
+.element-action{
     width: 120px;
     height: 100vh;
-    position: fixed;
-    right: 0;
-    top: 2;
-    color: lightblue;
+    position:absolute;
+    right: 2;
+    top: 3;
+    left: 90%;
 }
 .modal-header{
     background-color: lightblue;
@@ -39,5 +53,15 @@
 div.container {
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding: 20px;
-  } 
+    padding: 60px;
+}
+.modal-content{
+    padding: 0;
+    margin-left: 50px;
+
+} 
+.modal{
+    margin: 0;
+    height: 0;
+    width: auto;
+}

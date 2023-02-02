@@ -1,82 +1,107 @@
-<div class="content">
-    <div class ="element-wrapper">
-        <h1> Customer </h1>
-        <div class ="element-actions">
-            <button class="btn btn-primary"> AddCustomer </button>
+<section>
+    <div class="content">
+        <div class="heading">
+            <h2> CUSTOMER RECORD </h2>
+            <div class="element-action">
+                <button class="primary" (click)="toggleDisplayDivIf()"> AddCustomer </button>
+            </div>
+        </div>
+    <!-- </div> -->
+<!-- </section> -->
+        <div class="card">
+            <div class="card-body-padded">
+                <div class="table-container" *ngIf ="submitted">
+                    <table class="table table-padded">
+                        <thead>
+                            <tr>
+                                <th class="tableHead">Name</th>
+                                <th class="tableHead">Last Name</th>
+                                <th class="tableHead">Email</th>
+                                <th class="tableHead">Password</th> 
+                                <th class="tableHead">DOB</th> 
+                                <th class="tableHead">Gender</th>                         
+                                <th class="tableHead">Mobile Number</th>
+                                <th class="tableHead">Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="user in users">
+                                <td data-title="Name">{{user.name}}</td>
+                                <td data-title="Last Name">{{user.lname}}</td>
+                                <td data-title="Email ID">{{user.email}}</td>
+                                <td data-title="Password">{{user.passw}}</td>
+                                <td data-title="DOB">{{user.dob}}</td>
+                                <td data-title="Gender">{{user.gender}}</td> 
+                                <td data-title="Mobile Number">{{user.phoneNumber}}</td>
+                                <td data-title="Address">{{user.address}}</td>
+                                <td data-title="Action" class="action-btn px-0">
+                                    <button class="btn btn-primary-2 rounded-0 py-0"  data-toggle="modal" data-target="#edit_customer" ng-click="loadInfo(user)">
+                                        <i class="fas fa-edit mr-1"></i> Edit
+                                    </button>
+                                    <button class="btn btn-danger rounded-0 py-0"  ng-click="delete(user)">
+                                        <i class="fas fa-trash-alt mr-1"></i> Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="card-body-padded">
-        <div class="table-container">
-            <table class="table table-padded">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Password</th> 
-                        <th>DOB</th> 
-                        <th>Gender</th>                         
-                        <th>Mobile Number</th>
-                        <th>Address</th>
-                    </tr>
-                </thead>
-                <tbody>
-            </table>
-        </div>
-    </div>
-</div>
-<section class="modal fade " id="add_user" aria-hidden="true"  >
-    <div class="modal-content">
+</section>
+<section class="modal fade " >
+    <div class="modal-content" *ngIf="isShowDivIf">
         <div class="modal-header">
             <h4 class="modal-title">Add user Customer</h4>
         </div>
-<!-- <h1> KINDLY FILL YOUR CUSTOMER DETAILS </h1> -->
             <div class="card">
-                <div class="container">
-                <form id="addcustomer">
+                <div class="container" >
+                <form #f="ngForm" (ngSubmit)="onSubmit()" id="addcustomer">
                     <div class="row">
-                        <div class=" form-group col-sm-6 mb-2">
+                        <div class=" form-group col-sm-6 mb-2" >
                             <label for="name"> Name: </label> 
-                            <input type="text" name="name" class="form-control" style="text-transform:uppercase"  required>
+                            <input type="text" name="name" class="form-control" style="text-transform:uppercase"  ngModel/>
                         </div>
                         <div class="form-group col-sm-6 mb-2">
                             <label for="lname"> Last Name: </label>
-                            <input type="text" name="lastName" class="form-control" style="text-transform:uppercase"  required>
+                            <input type="text" name="lname" class="form-control" style="text-transform:uppercase"  ngModel/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6 mb-2">
                             <label> Email: </label>
-                            <input type="text" name="email" class="form-control" style="text-transform:lowercase" required>
+                            <input type="text" name="email" class="form-control" style="text-transform:lowercase"  ngModel/>
                         </div>
                         <div class="form-group col-sm-6 mb-2">
                             <label> Password: </label>
-                            <input type="password" id="pwd" name="passw" class="form-control" required>
+                            <input type="password" id="pwd" name="passw" class="form-control"  ngModel/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6 mb-2">
                             <label> DOB: </label>
-                            <input type="text" name="dob" class="form-control" required>
+                            <input type="text" name="dob" class="form-control"  ngModel/>
                         </div>
                         <div class="form-group col-sm-6 mb-2">
                             <label> Gender: </label>
-                            <input type="text" name="gender" class="form-control" style="text-transform:uppercase" required>
+                            <input type="text" name="gender" class="form-control" style="text-transform:uppercase"  ngModel/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6 mb-2">
                             <label> Mobile Number: </label>
-                            <input type="text" name="mobileNum" class="form-control" required>
+                            <input required type="tel" name="phoneNumber" class="form-control"  ngModel/>
                         </div>
                         <div class="form-group col-sm-6 mb-2">
                             <label> Address: </label>
-                            <input type="text" name="Addres" style="text-transform:lowercase" class="form-control" required>
+                            <input type="text" name="address" style="text-transform:lowercase" class="form-control"  ngModel/>
                         </div>
                     </div>
                     <br>
                     <div class="form-group col-sm-6 mb-2">
-                    <button type ="submit" class="btn btn-primary" (click)="OnClick()"> submit </button> 
+                    <button type ="submit" class="btn btn-primary"  [disabled]="!f.valid" (click)="OnClick()"> Submit </button> 
                     </div>
                 </form>
                 </div>
@@ -84,5 +109,4 @@
     </div>
 </section>
 
-
-
+<!-- Edit View -->

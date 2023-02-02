@@ -2,12 +2,17 @@
     padding-top: 20px;
     display: flex;
     justify-content: left;
-    background-color: #ADD8E6; 
+    /* background-color: #ADD8E6;  */
+    background-image: url("E:\Memstech\learning_memstech\src\assets\home.jpg"); 
     margin-left: 5pxpx;
+    width: 100%;
+    height: 100vh;
 }
 .h2{
     margin-right: 500px;
-}
+    /* text-align: center; */
+    /* color: #fff; */
+} 
 /* .nav navbar-nav{
     padding-top: 20px;
     justify-content: right;
@@ -38,19 +43,20 @@
 .nav{
     margin-left: 425px;
 }
-/* .navbar-brand{
+.content{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    /* transform: translateY(-50%); */
     text-align: center;
-    justify-content: center;
-} */
-/* .heading{
-    text-align: center;
-    left: 100px;
-} */
-/* .body{
-    margin: 0;
-    padding: 0;
-    background: url(memstech.png);
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
-}  */
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
